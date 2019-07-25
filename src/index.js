@@ -143,8 +143,7 @@ class App {
     for (let i = 0; i <= 6; i += 1) {
       const filterItems = collection.filter((item) => {
         const timestampOfItem = parseInt(item, 10);
-        return timestampOfItem >= valueOfSevenDaysAgo + i * DAY &&
-          timestampOfItem < valueOfSevenDaysAgo + (i + 1) * DAY;
+        return timestampOfItem >= valueOfSevenDaysAgo + i * DAY && timestampOfItem < valueOfSevenDaysAgo + (i + 1) * DAY;
       });
       const count = filterItems.length;
       const thElDate = document.createElement('th');
